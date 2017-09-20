@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.setupGetOrderReportButton()
+    setupGetOrderReportButton()
   }
   
   @IBAction func getOrderReportButtonClicked(_ sender: Any) {
@@ -26,12 +26,12 @@ class ViewController: UIViewController {
     orderReportView.awesomeBronzeBagCountLabel.text = ""
     orderReportView.awesomeBronzeBagCountActivityIndicator.startAnimating()
     
-    DataManager.GETShopifyOrderReport { shopifyOrderReport in
-      self.getOrderReportButton.isEnabled = true
-      self.orderReportView.totalSpendingLabel.text = "$\(shopifyOrderReport.totalSpending) CAD"
-      self.orderReportView.totalSpendingActivityIndicator.stopAnimating()
-      self.orderReportView.awesomeBronzeBagCountLabel.text = "\(shopifyOrderReport.awesomeBronzeBagCount)"
-      self.orderReportView.awesomeBronzeBagCountActivityIndicator.stopAnimating()
+    DataManager.GETShopifyOrderReport { [weak self] shopifyOrderReport in
+      self?.getOrderReportButton.isEnabled = true
+      self?.orderReportView.totalSpendingLabel.text = "$\(shopifyOrderReport.totalSpending) 💸"
+      self?.orderReportView.totalSpendingActivityIndicator.stopAnimating()
+      self?.orderReportView.awesomeBronzeBagCountLabel.text = "\(shopifyOrderReport.awesomeBronzeBagCount) 👜"
+      self?.orderReportView.awesomeBronzeBagCountActivityIndicator.stopAnimating()
     }
   }
   

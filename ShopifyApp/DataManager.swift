@@ -54,6 +54,11 @@ class DataManager {
         var awesomeBronzeBagCount: Int = 0
         for order in orders {
           if let email = order["email"].string {
+            /* Napoleon Batz is distinguished by his email
+               as a safe measure, as email likely cannot be
+               changed while first_name and last_name perhaps
+               can be.
+             */
             if email == "napoleon.batz@gmail.com" {
               if let currency = order["currency"].string {
                 if currency == "CAD" {

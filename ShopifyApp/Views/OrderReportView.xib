@@ -28,89 +28,79 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="269"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="624-Zw-tzD" userLabel="LeftStackView">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="624-Zw-tzD" userLabel="LeftStackView">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="269"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ABp-mE-P15" userLabel="LeftInnerStackView">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="269"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spendings of Napoleon Batz (CAD)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zci-eq-CQ5" userLabel="totalSpendingTitleLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="akq-ls-kuP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62E-PW-hr7" userLabel="totalSpendingContainerView">
+                            <rect key="frame" x="0.0" y="134.5" width="200" height="134.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spendings of Napoleon Batz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zci-eq-CQ5" userLabel="totalSpendingTitleLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💸" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2A-fL-iJT" userLabel="totalSpendingLabel">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="134.5" id="akq-ls-kuP"/>
-                                    </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62E-PW-hr7" userLabel="totalSpendingContainerView">
-                                    <rect key="frame" x="0.0" y="134.5" width="200" height="134.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💸" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2A-fL-iJT" userLabel="totalSpendingLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="134"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="psd-4L-AO0" userLabel="totalSpendingActivityIndicator">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="134"/>
-                                        </activityIndicatorView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="psd-4L-AO0" firstAttribute="trailing" secondItem="V2A-fL-iJT" secondAttribute="trailing" id="4Hm-0u-5Up"/>
-                                        <constraint firstItem="psd-4L-AO0" firstAttribute="leading" secondItem="V2A-fL-iJT" secondAttribute="leading" id="7qt-dX-fq3"/>
-                                        <constraint firstItem="psd-4L-AO0" firstAttribute="bottom" secondItem="V2A-fL-iJT" secondAttribute="bottom" id="9iW-BE-aUT"/>
-                                        <constraint firstItem="psd-4L-AO0" firstAttribute="top" secondItem="V2A-fL-iJT" secondAttribute="top" id="CJA-mx-6VC"/>
-                                        <constraint firstItem="V2A-fL-iJT" firstAttribute="top" secondItem="62E-PW-hr7" secondAttribute="top" id="b54-zT-NWo"/>
-                                        <constraint firstItem="V2A-fL-iJT" firstAttribute="leading" secondItem="62E-PW-hr7" secondAttribute="leading" id="k3l-VC-HKQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="V2A-fL-iJT" secondAttribute="trailing" id="mD0-hV-x5z"/>
-                                        <constraint firstAttribute="bottom" secondItem="V2A-fL-iJT" secondAttribute="bottom" id="reL-BC-RUj"/>
-                                    </constraints>
-                                </view>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="psd-4L-AO0" userLabel="totalSpendingActivityIndicator">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
+                                </activityIndicatorView>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="psd-4L-AO0" firstAttribute="trailing" secondItem="V2A-fL-iJT" secondAttribute="trailing" id="4Hm-0u-5Up"/>
+                                <constraint firstItem="psd-4L-AO0" firstAttribute="leading" secondItem="V2A-fL-iJT" secondAttribute="leading" id="7qt-dX-fq3"/>
+                                <constraint firstItem="psd-4L-AO0" firstAttribute="bottom" secondItem="V2A-fL-iJT" secondAttribute="bottom" id="9iW-BE-aUT"/>
+                                <constraint firstItem="psd-4L-AO0" firstAttribute="top" secondItem="V2A-fL-iJT" secondAttribute="top" id="CJA-mx-6VC"/>
+                                <constraint firstItem="V2A-fL-iJT" firstAttribute="top" secondItem="62E-PW-hr7" secondAttribute="top" id="b54-zT-NWo"/>
+                                <constraint firstItem="V2A-fL-iJT" firstAttribute="leading" secondItem="62E-PW-hr7" secondAttribute="leading" id="k3l-VC-HKQ"/>
+                                <constraint firstAttribute="trailing" secondItem="V2A-fL-iJT" secondAttribute="trailing" id="mD0-hV-x5z"/>
+                                <constraint firstAttribute="bottom" secondItem="V2A-fL-iJT" secondAttribute="bottom" id="reL-BC-RUj"/>
+                            </constraints>
+                        </view>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-Wq-fWM" userLabel="RightStackView">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-Wq-fWM" userLabel="RightStackView">
                     <rect key="frame" x="200" y="0.0" width="200" height="269"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-Ux-k7I" userLabel="RightInnerStackView">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="269"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Bronze Bag Count" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-0a-YBZ" userLabel="awesomeBronzeBagCountTitleLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-Ej-bZb" userLabel="awesomeBronzeBagCountContainerView">
+                            <rect key="frame" x="0.0" y="134.5" width="200" height="134.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Bronze Bag Count" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-0a-YBZ" userLabel="awesomeBronzeBagCountTitleLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZM-Hr-aF0" userLabel="awesomeBronzeBagCountLabel">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-Ej-bZb" userLabel="awesomeBronzeBagCountContainerView">
-                                    <rect key="frame" x="0.0" y="134.5" width="200" height="134.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZM-Hr-aF0" userLabel="awesomeBronzeBagCountLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="134"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fXP-N0-NWY" userLabel="awesomeBronzeBagCountActivityIndicator">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="134"/>
-                                        </activityIndicatorView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="fXP-N0-NWY" firstAttribute="top" secondItem="SZM-Hr-aF0" secondAttribute="top" id="0dL-A2-MwI"/>
-                                        <constraint firstItem="SZM-Hr-aF0" firstAttribute="top" secondItem="w1p-Ej-bZb" secondAttribute="top" id="2s9-An-3mT"/>
-                                        <constraint firstAttribute="trailing" secondItem="SZM-Hr-aF0" secondAttribute="trailing" id="FEd-8y-dtS"/>
-                                        <constraint firstItem="SZM-Hr-aF0" firstAttribute="leading" secondItem="w1p-Ej-bZb" secondAttribute="leading" id="PbT-iA-woA"/>
-                                        <constraint firstItem="fXP-N0-NWY" firstAttribute="trailing" secondItem="SZM-Hr-aF0" secondAttribute="trailing" id="VUe-8W-VzQ"/>
-                                        <constraint firstItem="fXP-N0-NWY" firstAttribute="leading" secondItem="SZM-Hr-aF0" secondAttribute="leading" id="jfE-ZY-VKc"/>
-                                        <constraint firstAttribute="bottom" secondItem="SZM-Hr-aF0" secondAttribute="bottom" id="m78-z3-G7H"/>
-                                        <constraint firstItem="fXP-N0-NWY" firstAttribute="bottom" secondItem="SZM-Hr-aF0" secondAttribute="bottom" id="nom-0T-x8h"/>
-                                    </constraints>
-                                </view>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fXP-N0-NWY" userLabel="awesomeBronzeBagCountActivityIndicator">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="134.5"/>
+                                </activityIndicatorView>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="fXP-N0-NWY" firstAttribute="top" secondItem="SZM-Hr-aF0" secondAttribute="top" id="0dL-A2-MwI"/>
+                                <constraint firstItem="SZM-Hr-aF0" firstAttribute="top" secondItem="w1p-Ej-bZb" secondAttribute="top" id="2s9-An-3mT"/>
+                                <constraint firstAttribute="trailing" secondItem="SZM-Hr-aF0" secondAttribute="trailing" id="FEd-8y-dtS"/>
+                                <constraint firstItem="SZM-Hr-aF0" firstAttribute="leading" secondItem="w1p-Ej-bZb" secondAttribute="leading" id="PbT-iA-woA"/>
+                                <constraint firstItem="fXP-N0-NWY" firstAttribute="trailing" secondItem="SZM-Hr-aF0" secondAttribute="trailing" id="VUe-8W-VzQ"/>
+                                <constraint firstItem="fXP-N0-NWY" firstAttribute="leading" secondItem="SZM-Hr-aF0" secondAttribute="leading" id="jfE-ZY-VKc"/>
+                                <constraint firstAttribute="bottom" secondItem="SZM-Hr-aF0" secondAttribute="bottom" id="m78-z3-G7H"/>
+                                <constraint firstItem="fXP-N0-NWY" firstAttribute="bottom" secondItem="SZM-Hr-aF0" secondAttribute="bottom" id="nom-0T-x8h"/>
+                            </constraints>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
