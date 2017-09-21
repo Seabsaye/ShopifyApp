@@ -6,8 +6,6 @@
 //  Copyright © 2017 SebastianKolosa. All rights reserved.
 //
 
-import Foundation
-
 class ShopifyOrderReport {
   let totalSpending: Double
   let awesomeBronzeBagCount: Int

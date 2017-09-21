@@ -6,7 +6,6 @@
 //  Copyright © 2017 SebastianKolosa. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 @IBDesignable

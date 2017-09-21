@@ -6,11 +6,11 @@
 //  Copyright © 2017 SebastianKolosa. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
 import Alamofire
 
 class DataManager {
+  // Define DataManager as a singleton object
   private init() {}
   
   static let sharedInstance = DataManager()

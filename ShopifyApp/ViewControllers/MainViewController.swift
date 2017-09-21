@@ -18,6 +18,16 @@ class ViewController: UIViewController {
   }
   
   @IBAction func getOrderReportButtonClicked(_ sender: Any) {
+    getOrderReport()
+  }
+  
+  //MARK: - helpers
+  private func setupGetOrderReportButton() {
+    getOrderReportButton.layer.cornerRadius = 5.0
+    getOrderReportButton.setTitleColor(.gray, for: .disabled)
+  }
+  
+  private func getOrderReport() {
     getOrderReportButton.isEnabled = false
     
     orderReportView.totalSpendingLabel.text = ""
@@ -33,11 +43,5 @@ class ViewController: UIViewController {
       self?.orderReportView.awesomeBronzeBagCountLabel.text = "\(shopifyOrderReport.awesomeBronzeBagCount) 👜"
       self?.orderReportView.awesomeBronzeBagCountActivityIndicator.stopAnimating()
     }
-  }
-  
-  //MARK: - helpers
-  private func setupGetOrderReportButton() {
-    getOrderReportButton.layer.cornerRadius = 5.0
-    getOrderReportButton.setTitleColor(.gray, for: .disabled)
   }
 }
